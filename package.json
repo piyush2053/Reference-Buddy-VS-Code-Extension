@@ -1,7 +1,7 @@
 {
   "name": "referencebuddy",
   "displayName": "Reference Buddy VBS",
-  "description": "",
+  "description": "Reference Buddy is a VS Code extension designed to help developers efficiently locate references to keywords throughout their codebase. This tool enhances debugging skills and saves time, making it an invaluable asset for developers",
   "version": "0.0.4",
   "publisher": "VersaBlendSoftwares",
   "engines": {

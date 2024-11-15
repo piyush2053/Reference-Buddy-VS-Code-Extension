@@ -12,5 +12,3 @@ Reference Buddy is a VS Code extension designed to help developers efficiently l
 ## Whom to Talk ?
 - <img src="./documentation/ME.png" alt="Piyush Patel" style="border-radius: 50%; width: 30px; height: 30px; vertical-align: middle;"/> piyushpatel2053@gmail.com
 
-
-<img src="./documentation/benner.png" alt="versa blend softwares" style="vertical-align: middle;"/> 
