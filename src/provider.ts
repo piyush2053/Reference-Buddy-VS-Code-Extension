@@ -59,9 +59,6 @@ export default class Provider implements vscode.TextDocumentContentProvider, vsc
 	}
 
 	provideDocumentLinks(document: vscode.TextDocument, _token: vscode.CancellationToken): vscode.DocumentLink[] | undefined {
-		// While building the virtual document we have already created the links.
-		// Those are composed from the range inside the document and a target uri
-		// to which they point
 		const doc = this._documents.get(document.uri.toString());
 		if (doc) {
 			return doc.links;

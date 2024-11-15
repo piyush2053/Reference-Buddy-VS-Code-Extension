@@ -1,4 +1,4 @@
-# Reference Buddy
+# <img src="./logo.png" alt="Piyush Patel" style="border-radius: 50%; width: 30px; height: 30px; vertical-align: middle;"/>  Reference Buddy
 Reference Buddy is a VS Code extension designed to help developers efficiently locate references to keywords throughout their codebase. This tool enhances debugging skills and saves time, making it an invaluable asset for developers
 
 ## Features

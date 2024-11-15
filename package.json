@@ -1,11 +1,15 @@
 {
-  "name": "reference_buddy_vbs",
+  "name": "referencebuddy",
   "displayName": "Reference Buddy VBS",
   "description": "",
   "version": "0.0.1",
+  "publisher": "VersaBlendSoftwares",
   "engines": {
     "vscode": "^1.95.0"
   },
+  "repository": {
+		"url": "https://github.com/piyush2053/Reference-Buddy-VS-Code-Extension"
+	},
   "categories": [
     "Other"
   ],
