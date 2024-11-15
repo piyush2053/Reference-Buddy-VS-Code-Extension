@@ -2,7 +2,7 @@
   "name": "referencebuddy",
   "displayName": "Reference Buddy VBS",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "VersaBlendSoftwares",
   "engines": {
     "vscode": "^1.95.0"

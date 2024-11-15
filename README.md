@@ -9,10 +9,5 @@ Reference Buddy is a VS Code extension designed to help developers efficiently l
 > Tip: Right click on any keyword or function and click on refrence buddy
 
 
-# How to run locally
-
-* `npm run compile` to start the compiler in watch mode
-
-
 ## Whom to Talk ?
 - <img src="./documentation/ME.png" alt="Piyush Patel" style="border-radius: 50%; width: 30px; height: 30px; vertical-align: middle;"/> piyushpatel2053@gmail.com
