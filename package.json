@@ -7,6 +7,7 @@
   "engines": {
     "vscode": "^1.95.0"
   },
+  "icon": "./documentation/logo.png",
   "repository": {
 		"url": "https://github.com/piyush2053/Reference-Buddy-VS-Code-Extension"
 	},
