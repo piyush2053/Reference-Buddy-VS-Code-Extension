@@ -1,11 +1,25 @@
-import * as vscode from 'vscode';
-export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "vbs" is now active!');
-	const disposable = vscode.commands.registerCommand('vbs.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from vbs!');
+/*---------------------------------------------------------
+ * Copyright (C) Versa Blend Softwares. All rights reserved.
+ *--------------------------------------------------------*/
+
+import { workspace, languages, window, commands, ExtensionContext, Disposable } from 'vscode';
+import ContentProvider, { encodeLocation } from './provider';
+
+export function activate(context: ExtensionContext) {
+
+	const provider = new ContentProvider();
+	const providerRegistrations = Disposable.from(
+		workspace.registerTextDocumentContentProvider(ContentProvider.scheme, provider),
+		languages.registerDocumentLinkProvider({ scheme: ContentProvider.scheme }, provider)
+	);
+	const commandRegistration = commands.registerTextEditorCommand('editor.printReferences', editor => {
+		const uri = encodeLocation(editor.document.uri, editor.selection.active);
+		return workspace.openTextDocument(uri).then(doc => window.showTextDocument(doc, editor.viewColumn! + 1));
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(
+		provider,
+		commandRegistration,
+		providerRegistrations
+	);
 }
-
-export function deactivate() {}

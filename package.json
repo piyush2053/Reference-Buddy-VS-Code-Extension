@@ -1,7 +1,7 @@
 {
-  "name": "vbs",
-  "displayName": "vbs",
-  "description": "quick starter boiler templates for various languages and framework",
+  "name": "reference_buddy_vbs",
+  "displayName": "Reference Buddy VBS",
+  "description": "",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
@@ -9,16 +9,45 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
   "contributes": {
-    "commands": [
-      {
-        "command": "vbs.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+		"commands": [
+			{
+				"command": "editor.printReferences",
+				"title": "Reference Buddy"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "editor.printReferences",
+					"when": "editorHasReferenceProvider",
+					"group": "navigation@1.31"
+				}
+			]
+		},
+		"languages": [
+			{
+				"id": "locations",
+				"aliases": [
+					"Locations"
+				],
+				"extensions": [
+					".locations"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "locations",
+				"path": "./locations-syntax.json",
+				"scopeName": "source.locations"
+			}
+		]
+	},
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
